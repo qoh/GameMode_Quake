@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>map.cs</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="manager.html">
+                manager.cs
+              </a>
+            
+              
+              <a class="source" href="map.html">
+                map.cs
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>map.cs</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>function QuakeMap::onRemove(%<span class="keyword">this</span>)
+{
+	%<span class="keyword">this</span>.data.<span class="keyword">delete</span>();
+
+    %<span class="keyword">this</span>.authors.<span class="keyword">delete</span>();
+    %<span class="keyword">this</span>.cameras.<span class="keyword">delete</span>();
+}
+
+function QuakeMap::getCredits(%<span class="keyword">this</span>)
+{
+    %length = %<span class="keyword">this</span>.authors.getLength();
+
+	<span class="keyword">if</span> (%length &lt; <span class="number">2</span>) {
+		<span class="keyword">return</span> %<span class="keyword">this</span>.authors.item[<span class="number">0</span>];
+	}
+
+	<span class="keyword">for</span> (%i = <span class="number">0</span>; %i &lt; %length - <span class="number">1</span>; %i++) {
+		%partial = %partial @ (%i ? <span class="string">", "</span> : <span class="string">""</span>) @ %<span class="keyword">this</span>.authors.item[%i];
+	}
+
+	<span class="keyword">return</span> %partial SPC <span class="string">"and"</span> SPC %<span class="keyword">this</span>.authors.item[%length - <span class="number">1</span>];
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
