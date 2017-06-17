@@ -42,7 +42,8 @@ function QuakePlayer::damage(%this, %obj, %src, %pos, %dmg, %type)
 			%sourceClient.disallowHitSound = 1;
 			%sourceClient.play2D(QuakeHitSound);
 
-			schedule(0, 0, eval, %sourceClient @ ".disallowHitSound = 0;");
+			schedule(1, %sourceClient, reEnableHitSound, %sourceClient);
+			// schedule(0, 0, eval, %sourceClient @ ".disallowHitSound = 0;");
 		}
 	}
 
@@ -77,6 +78,7 @@ function QuakePlayer::damage(%this, %obj, %src, %pos, %dmg, %type)
 	}
 	else
 	{
+		%obj.setDamageFlash(0.3);
 		%obj.playPain();
 	}
 
@@ -84,6 +86,11 @@ function QuakePlayer::damage(%this, %obj, %src, %pos, %dmg, %type)
 	{
 		%obj.client.updateQuakeDisplay();
 	}
+}
+
+function reEnableHitSound(%client)
+{
+	%client.disallowHitSound = 0;
 }
 
 function Player::addArmor( %this, %armor)
