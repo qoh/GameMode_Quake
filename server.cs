@@ -37,6 +37,7 @@ exec("./src/items/misc.cs");
 exec("./src/items/package.cs");
 
 exec("./src/display/methods.cs");
+exec("./src/pointsDisplay.cs");
 
 if (!isObject(QuakeMapManager))
 {
