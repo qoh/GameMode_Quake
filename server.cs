@@ -10,6 +10,7 @@ exec("./lib/jettison.cs");
 exec("./src/sounds/descriptions.cs");
 exec("./src/sounds/misc.cs");
 exec("./src/sounds/vo.cs");
+exec("./src/sounds/powerups.cs");
 
 exec("./src/maps/manager.cs");
 exec("./src/maps/map.cs");

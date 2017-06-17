@@ -40,6 +40,12 @@ datablock AudioProfile(QuakeVO_FragsLeft_3)
 	preload = 1;
 };
 
+quakeSound(QuakeVO_prepare, "feedback/prepare", AudioQuiet3D);
+quakeSound(QuakeVO_three, "feedback/three", AudioQuiet3D);
+quakeSound(QuakeVO_two, "feedback/two", AudioQuiet3D);
+quakeSound(QuakeVO_one, "feedback/one", AudioQuiet3D);
+quakeSound(QuakeVO_fight, "feedback/fight", AudioQuiet3D);
+
 datablock AudioProfile(QuakeVO_Humiliation)
 {
 	fileName = "Add-Ons/GameMode_Quake/sound/feedback/humiliation.wav";

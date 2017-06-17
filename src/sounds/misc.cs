@@ -1,6 +1,7 @@
 datablock AudioProfile(QuakeHitSound)
 {
-	fileName = "Add-Ons/GameMode_Quake/sound/hitsound.wav";
+	//fileName = "Add-Ons/GameMode_Quake/sound/hitsound.wav";
+	fileName = "Add-Ons/GameMode_Quake/sound/feedback/hit.wav";
 	description = AudioDefault3D;
 	preload = true;
 };
