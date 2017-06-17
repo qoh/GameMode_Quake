@@ -67,9 +67,9 @@ ADDON Bot_Shark
 ADDON Bot_Zombie
 
 // Game-Mode Add-On
-ADDON Sound_Quake3_Generic
-ADDON Sound_Quake3_Demonic
-ADDON Sound_Quake3_Electro
+//ADDON Sound_Quake3_Generic
+//ADDON Sound_Quake3_Demonic
+//ADDON Sound_Quake3_Electro
 
 ADDON Weapon_Package_Quake
 ADDON GameMode_Quake
