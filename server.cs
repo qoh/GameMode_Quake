@@ -3,7 +3,7 @@ $Quake::DefaultFragLimit = 25;
 
 $CorpseTimeoutValue = $Game::Item::PopTime;
 $Game::OnTouchImmuneTime = 0;
-exec("config/auth.cs");
+
 exec("./lib/misc.cs");
 exec("./lib/jettison.cs");
 
