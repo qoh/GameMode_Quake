@@ -35,14 +35,7 @@ package QuakeMapsPackage
 			%client = %brick.client;
 
 			if (!isObject(%client))
-			{
-				%client = QuakeFakeClient;
-
-				if (!isObject(%client))
-				{
-					continue;
-				}
-			}
+				continue;
 
 			$InputTarget_["Self"] = %brick;
 			$InputTarget_["Player"] = %client.player;

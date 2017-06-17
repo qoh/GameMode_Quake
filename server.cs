@@ -45,12 +45,3 @@ if (!isObject(QuakeMapManager))
 	QuakeMapManager.scanForMaps();
 	QuakeMapManager.schedule(0, goToNextMap);
 }
-
-if (!isObject(QuakeFakeClient))
-{
-	new AIConnection(QuakeFakeClient)
-	{
-		name = "Quake";
-		bl_id = 50;
-	};
-}
